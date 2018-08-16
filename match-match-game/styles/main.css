@@ -1,0 +1,227 @@
+body {
+    background-color: #5cb85c;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, .timer{
+    color: white;
+    text-transform: capitalize;
+}
+h1 {
+    font-size: 90px;
+    margin-top: 100px;
+}
+h2 {
+    font-size: 45px;
+    margin: 20px 0 20px;
+}
+h3 {
+    font-size: 25px;
+    margin: 20px 0 10px;
+}
+ul {
+    text-align: left;
+    font-size: 0;
+}
+ul.rules {
+    font-size: 16px;
+    padding: 0 150px;
+}
+.game-field-wrapper_easy, .game-field-wrapper_medium, .game-field-wrapper_hard {
+    background-color: rgba(85, 85, 85, 0.3);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px auto 0;
+}
+.game-field-wrapper_easy {
+    width: 480px;
+}
+.game-field-wrapper_medium {
+    width: 590px;
+}
+.game-field-wrapper_hard {
+    width: 920px;
+}
+.card{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.timer {
+    margin-top: 20px;
+    font-size: 25px;
+    text-transform: lowercase;
+}
+form {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 15px;
+    width: 450px;
+    margin: 0 auto;
+    text-align: left;
+}
+input{
+    border:none;
+    background-color: rgba(256, 256, 256, 0.4);
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: background-color 0.3s;
+}
+input:hover, input:focus {
+    background-color: rgba(85, 85, 85, 0.3);
+}
+input[type="text"], input[type="email"]{
+    width: 200px;
+    height: 20px;
+    margin-bottom: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+input[type="radio"]:checked {
+    border: rgb(223, 223, 223) 5px solid;
+    background-color: rgba(85, 85, 85, 0.3);
+}
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+form img {
+    width: 60px;
+    height:60px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 2px solid white;
+    margin-top: 5px;
+}
+label {
+    display: block;
+}
+.difficulty label{
+    display: inline-block;
+    margin-right: 20px;
+}
+div.shirt-img, div.difficulty {
+    margin-top: 10px;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 3px;
+}
+.rotation-effect {
+    pointer-events: none;
+    animation-name: flipInY;
+    transform: rotateY(0);
+    cursor: default;
+    backface-visibility: visible;
+    animation-duration: .9s;
+    background-size: contain;
+}
+.disappearance {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .5s;
+}
+.shirt-color-1 {
+    background: url("../images/shirt_1.png");
+    background-size: cover
+}
+.shirt-color-2 {
+    background: url("../images/shirt_2.png");
+    background-size: cover
+}
+.shirt-color-3 {
+    background: url("../images/shirt_3.png");
+    background-size: cover
+}
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.results {
+    text-align: left;
+}
+.players-profile, .game-field, .congratulation {
+    display: none;
+}
+.button {
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #5cb85c;
+    outline: 0;
+    border: none;
+    background-color: white;
+    transition: background-color 0.3s;
+    vertical-align: middle;
+}
+.button:hover {
+    background-color: gray;
+}
+.button-small {
+    font-size: 20px;
+    width: 150px;
+    height: 35px;
+}
+.button-big {
+    margin-top: 50px;
+    font-size: 36px;
+    width: 200px;
+    height: 75px;
+}
+.button-panel button:nth-child(1) {
+    margin-right: 20px;
+}
+.button-panel {
+    text-align: center;
+    margin-top: 20px;
+}
+.top-list div {
+    display: inline-block;
+    font-size: 18px;
+}
+.top-list_player {
+    width: 200px;
+    margin-left: 20px;
+}
+.top-list_position {
+    width: 20px;
+}
+.results li{
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+}
+
+.results li:hover {
+    background-color:#f5f5f5;
+}
+@keyframes flipInY {
+    from {
+        transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    40% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+        animation-timing-function: ease-in;
+    }
+    60% {
+        transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+    to {
+        transform: perspective(400px);
+    }
+}
